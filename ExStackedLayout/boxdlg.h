@@ -2,6 +2,8 @@
 #define BOXDLG_H
 
 #include <QDialog>
+#include <QPushButton>
+#include <QBoxLayout>
 
 namespace Ui {
 class BoxDlg;
@@ -17,6 +19,8 @@ public:
 
 private:
 	Ui::BoxDlg *ui;
+	QPushButton *pBtn1, *pBtn2, *pBtn3, *pBtn4, *pBtn5;
+	QBoxLayout *pLayout;
 };
 
 #endif // BOXDLG_H

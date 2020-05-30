@@ -16,14 +16,26 @@ DEFINES += QT_DEPRECATED_WARNINGS
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
+    boxdlg.cpp \
+    griddlg.cpp \
     main.cpp \
-    hboxdlg.cpp
+    hboxdlg.cpp \
+    maindlg.cpp \
+    vboxdlg.cpp
 
 HEADERS += \
-    hboxdlg.h
+    boxdlg.h \
+    griddlg.h \
+    hboxdlg.h \
+    maindlg.h \
+    vboxdlg.h
 
 FORMS += \
-    hboxdlg.ui
+    boxdlg.ui \
+    griddlg.ui \
+    hboxdlg.ui \
+    maindlg.ui \
+    vboxdlg.ui
 
 TRANSLATIONS += \
     ExStackedLayout_en_SG.ts

@@ -2,6 +2,9 @@
 #define MYDLG_H
 
 #include <QDialog>
+#include <QHBoxLayout>
+#include <QVBoxLayout>
+#include <QPushButton>
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MyDlg; }
@@ -17,5 +20,8 @@ public:
 
 private:
 	Ui::MyDlg *ui;
+	QPushButton *pBtn1, *pBtn2, *pBtn3;
+	// QHBoxLayout *pLayout;
+	QVBoxLayout *pLayout;
 };
 #endif // MYDLG_H

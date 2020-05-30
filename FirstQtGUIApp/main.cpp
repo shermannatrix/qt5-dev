@@ -1,11 +1,15 @@
 #include "mainwindow.h"
 
 #include <QApplication>
+#include <QWidget>
 
 int main(int argc, char *argv[])
 {
 	QApplication a(argc, argv);
-	MainWindow w;
-	w.show();
+
+	QWidget myWindow;
+	myWindow.setWindowTitle("Hello Qt, my first GUI application.");
+	myWindow.show();
+
 	return a.exec();
 }

@@ -1,11 +1,13 @@
-#include "hboxdlg.h"
+#include "maindlg.h"
 
 #include <QApplication>
 
 int main(int argc, char *argv[])
 {
 	QApplication a(argc, argv);
-	HBoxDlg w;
-	w.show();
+
+	MainDlg dlg;
+	dlg.show();
+
 	return a.exec();
 }

@@ -2,6 +2,8 @@
 #define HBOXDLG_H
 
 #include <QDialog>
+#include <QHBoxLayout>
+#include <QPushButton>
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class HBoxDlg; }
@@ -17,5 +19,7 @@ public:
 
 private:
 	Ui::HBoxDlg *ui;
+	QPushButton *pBtn1, *pBtn2, *pBtn3, *pBtn4, *pBtn5;
+	QHBoxLayout *pLayout;
 };
 #endif // HBOXDLG_H
