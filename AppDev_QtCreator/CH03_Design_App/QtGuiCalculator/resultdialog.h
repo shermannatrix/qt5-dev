@@ -1,0 +1,4 @@
+#ifndef RESULTDIALOG_H
+#define RESULTDIALOG_H
+
+#endif // RESULTDIALOG_H
