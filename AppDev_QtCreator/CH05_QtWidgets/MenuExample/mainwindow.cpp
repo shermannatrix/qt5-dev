@@ -6,10 +6,15 @@ MainWindow::MainWindow(QWidget *parent)
 	, ui(new Ui::MainWindow)
 {
 	ui->setupUi(this);
+	connect(ui->actionAbout, &QAction::triggered, this, &MainWindow::handleAbout);
 }
 
 MainWindow::~MainWindow()
 {
 	delete ui;
+}
+
+void MainWindow::handleAbout() {
+	// Do something here.
 }
 
