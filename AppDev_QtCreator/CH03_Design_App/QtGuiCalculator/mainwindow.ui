@@ -18,9 +18,9 @@
     <property name="geometry">
      <rect>
       <x>90</x>
-      <y>30</y>
+      <y>40</y>
       <width>571</width>
-      <height>305</height>
+      <height>251</height>
      </rect>
     </property>
     <layout class="QVBoxLayout" name="verticalLayout">
@@ -29,7 +29,7 @@
        <item>
         <widget class="QPushButton" name="plusButton">
          <property name="sizePolicy">
-          <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
+          <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
            <horstretch>0</horstretch>
            <verstretch>0</verstretch>
           </sizepolicy>
@@ -37,8 +37,14 @@
          <property name="minimumSize">
           <size>
            <width>0</width>
-           <height>30</height>
+           <height>36</height>
           </size>
+         </property>
+         <property name="font">
+          <font>
+           <family>Avenir Next</family>
+           <pointsize>11</pointsize>
+          </font>
          </property>
          <property name="text">
           <string>+</string>
@@ -48,7 +54,7 @@
        <item>
         <widget class="QPushButton" name="minusButton">
          <property name="sizePolicy">
-          <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
+          <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
            <horstretch>0</horstretch>
            <verstretch>0</verstretch>
           </sizepolicy>
@@ -56,8 +62,14 @@
          <property name="minimumSize">
           <size>
            <width>0</width>
-           <height>30</height>
+           <height>36</height>
           </size>
+         </property>
+         <property name="font">
+          <font>
+           <family>Avenir Next</family>
+           <pointsize>11</pointsize>
+          </font>
          </property>
          <property name="text">
           <string>-</string>
@@ -67,7 +79,7 @@
        <item>
         <widget class="QPushButton" name="timesButton">
          <property name="sizePolicy">
-          <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
+          <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
            <horstretch>0</horstretch>
            <verstretch>0</verstretch>
           </sizepolicy>
@@ -75,8 +87,14 @@
          <property name="minimumSize">
           <size>
            <width>0</width>
-           <height>30</height>
+           <height>36</height>
           </size>
+         </property>
+         <property name="font">
+          <font>
+           <family>Avenir Next</family>
+           <pointsize>11</pointsize>
+          </font>
          </property>
          <property name="text">
           <string>*</string>
@@ -86,7 +104,7 @@
        <item>
         <widget class="QPushButton" name="divideButton">
          <property name="sizePolicy">
-          <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
+          <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
            <horstretch>0</horstretch>
            <verstretch>0</verstretch>
           </sizepolicy>
@@ -94,8 +112,14 @@
          <property name="minimumSize">
           <size>
            <width>0</width>
-           <height>30</height>
+           <height>36</height>
           </size>
+         </property>
+         <property name="font">
+          <font>
+           <family>Avenir Next</family>
+           <pointsize>11</pointsize>
+          </font>
          </property>
          <property name="text">
           <string>/</string>
@@ -110,12 +134,12 @@
         <enum>Qt::Vertical</enum>
        </property>
        <property name="sizeType">
-        <enum>QSizePolicy::Minimum</enum>
+        <enum>QSizePolicy::Fixed</enum>
        </property>
        <property name="sizeHint" stdset="0">
         <size>
          <width>20</width>
-         <height>45</height>
+         <height>10</height>
         </size>
        </property>
       </spacer>
@@ -123,7 +147,7 @@
      <item>
       <widget class="QLineEdit" name="argument1Input">
        <property name="sizePolicy">
-        <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+        <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
          <horstretch>0</horstretch>
          <verstretch>0</verstretch>
         </sizepolicy>
@@ -137,7 +161,7 @@
        <property name="font">
         <font>
          <family>Avenir Next</family>
-         <pointsize>11</pointsize>
+         <pointsize>14</pointsize>
         </font>
        </property>
       </widget>
@@ -148,12 +172,12 @@
         <enum>Qt::Vertical</enum>
        </property>
        <property name="sizeType">
-        <enum>QSizePolicy::Minimum</enum>
+        <enum>QSizePolicy::Fixed</enum>
        </property>
        <property name="sizeHint" stdset="0">
         <size>
          <width>20</width>
-         <height>45</height>
+         <height>5</height>
         </size>
        </property>
       </spacer>
@@ -161,7 +185,7 @@
      <item>
       <widget class="QLineEdit" name="argument2Input">
        <property name="sizePolicy">
-        <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+        <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
          <horstretch>0</horstretch>
          <verstretch>0</verstretch>
         </sizepolicy>
@@ -172,6 +196,12 @@
          <height>35</height>
         </size>
        </property>
+       <property name="font">
+        <font>
+         <family>Avenir Next</family>
+         <pointsize>14</pointsize>
+        </font>
+       </property>
       </widget>
      </item>
      <item>
@@ -180,12 +210,12 @@
         <enum>Qt::Vertical</enum>
        </property>
        <property name="sizeType">
-        <enum>QSizePolicy::Minimum</enum>
+        <enum>QSizePolicy::Fixed</enum>
        </property>
        <property name="sizeHint" stdset="0">
         <size>
          <width>20</width>
-         <height>45</height>
+         <height>20</height>
         </size>
        </property>
       </spacer>
@@ -197,6 +227,12 @@
          <width>0</width>
          <height>30</height>
         </size>
+       </property>
+       <property name="font">
+        <font>
+         <family>Avenir Next</family>
+         <pointsize>11</pointsize>
+        </font>
        </property>
        <property name="text">
         <string>About</string>

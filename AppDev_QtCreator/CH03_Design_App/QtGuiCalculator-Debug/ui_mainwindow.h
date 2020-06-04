@@ -52,7 +52,7 @@ public:
         centralwidget->setObjectName(QString::fromUtf8("centralwidget"));
         verticalLayoutWidget = new QWidget(centralwidget);
         verticalLayoutWidget->setObjectName(QString::fromUtf8("verticalLayoutWidget"));
-        verticalLayoutWidget->setGeometry(QRect(90, 30, 571, 305));
+        verticalLayoutWidget->setGeometry(QRect(90, 40, 571, 251));
         verticalLayout = new QVBoxLayout(verticalLayoutWidget);
         verticalLayout->setObjectName(QString::fromUtf8("verticalLayout"));
         verticalLayout->setContentsMargins(0, 0, 0, 0);
@@ -60,12 +60,16 @@ public:
         horizontalLayout->setObjectName(QString::fromUtf8("horizontalLayout"));
         plusButton = new QPushButton(verticalLayoutWidget);
         plusButton->setObjectName(QString::fromUtf8("plusButton"));
-        QSizePolicy sizePolicy(QSizePolicy::Minimum, QSizePolicy::Preferred);
+        QSizePolicy sizePolicy(QSizePolicy::Minimum, QSizePolicy::Fixed);
         sizePolicy.setHorizontalStretch(0);
         sizePolicy.setVerticalStretch(0);
         sizePolicy.setHeightForWidth(plusButton->sizePolicy().hasHeightForWidth());
         plusButton->setSizePolicy(sizePolicy);
-        plusButton->setMinimumSize(QSize(0, 30));
+        plusButton->setMinimumSize(QSize(0, 36));
+        QFont font;
+        font.setFamily(QString::fromUtf8("Avenir Next"));
+        font.setPointSize(11);
+        plusButton->setFont(font);
 
         horizontalLayout->addWidget(plusButton);
 
@@ -73,7 +77,8 @@ public:
         minusButton->setObjectName(QString::fromUtf8("minusButton"));
         sizePolicy.setHeightForWidth(minusButton->sizePolicy().hasHeightForWidth());
         minusButton->setSizePolicy(sizePolicy);
-        minusButton->setMinimumSize(QSize(0, 30));
+        minusButton->setMinimumSize(QSize(0, 36));
+        minusButton->setFont(font);
 
         horizontalLayout->addWidget(minusButton);
 
@@ -81,7 +86,8 @@ public:
         timesButton->setObjectName(QString::fromUtf8("timesButton"));
         sizePolicy.setHeightForWidth(timesButton->sizePolicy().hasHeightForWidth());
         timesButton->setSizePolicy(sizePolicy);
-        timesButton->setMinimumSize(QSize(0, 30));
+        timesButton->setMinimumSize(QSize(0, 36));
+        timesButton->setFont(font);
 
         horizontalLayout->addWidget(timesButton);
 
@@ -89,33 +95,34 @@ public:
         divideButton->setObjectName(QString::fromUtf8("divideButton"));
         sizePolicy.setHeightForWidth(divideButton->sizePolicy().hasHeightForWidth());
         divideButton->setSizePolicy(sizePolicy);
-        divideButton->setMinimumSize(QSize(0, 30));
+        divideButton->setMinimumSize(QSize(0, 36));
+        divideButton->setFont(font);
 
         horizontalLayout->addWidget(divideButton);
 
 
         verticalLayout->addLayout(horizontalLayout);
 
-        verticalSpacer_2 = new QSpacerItem(20, 45, QSizePolicy::Minimum, QSizePolicy::Minimum);
+        verticalSpacer_2 = new QSpacerItem(20, 10, QSizePolicy::Minimum, QSizePolicy::Fixed);
 
         verticalLayout->addItem(verticalSpacer_2);
 
         argument1Input = new QLineEdit(verticalLayoutWidget);
         argument1Input->setObjectName(QString::fromUtf8("argument1Input"));
-        QSizePolicy sizePolicy1(QSizePolicy::Expanding, QSizePolicy::Preferred);
+        QSizePolicy sizePolicy1(QSizePolicy::Expanding, QSizePolicy::Fixed);
         sizePolicy1.setHorizontalStretch(0);
         sizePolicy1.setVerticalStretch(0);
         sizePolicy1.setHeightForWidth(argument1Input->sizePolicy().hasHeightForWidth());
         argument1Input->setSizePolicy(sizePolicy1);
         argument1Input->setMinimumSize(QSize(0, 35));
-        QFont font;
-        font.setFamily(QString::fromUtf8("Avenir Next"));
-        font.setPointSize(11);
-        argument1Input->setFont(font);
+        QFont font1;
+        font1.setFamily(QString::fromUtf8("Avenir Next"));
+        font1.setPointSize(14);
+        argument1Input->setFont(font1);
 
         verticalLayout->addWidget(argument1Input);
 
-        verticalSpacer = new QSpacerItem(20, 45, QSizePolicy::Minimum, QSizePolicy::Minimum);
+        verticalSpacer = new QSpacerItem(20, 5, QSizePolicy::Minimum, QSizePolicy::Fixed);
 
         verticalLayout->addItem(verticalSpacer);
 
@@ -124,16 +131,18 @@ public:
         sizePolicy1.setHeightForWidth(argument2Input->sizePolicy().hasHeightForWidth());
         argument2Input->setSizePolicy(sizePolicy1);
         argument2Input->setMinimumSize(QSize(0, 35));
+        argument2Input->setFont(font1);
 
         verticalLayout->addWidget(argument2Input);
 
-        verticalSpacer_3 = new QSpacerItem(20, 45, QSizePolicy::Minimum, QSizePolicy::Minimum);
+        verticalSpacer_3 = new QSpacerItem(20, 20, QSizePolicy::Minimum, QSizePolicy::Fixed);
 
         verticalLayout->addItem(verticalSpacer_3);
 
         aboutButton = new QPushButton(verticalLayoutWidget);
         aboutButton->setObjectName(QString::fromUtf8("aboutButton"));
         aboutButton->setMinimumSize(QSize(0, 30));
+        aboutButton->setFont(font);
 
         verticalLayout->addWidget(aboutButton);
 

@@ -17,13 +17,16 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 SOURCES += \
     main.cpp \
-    mainwindow.cpp
+    mainwindow.cpp \
+    resultdialog.cpp
 
 HEADERS += \
-    mainwindow.h
+    mainwindow.h \
+    resultdialog.h
 
 FORMS += \
-    mainwindow.ui
+    mainwindow.ui \
+    resultdialog.ui
 
 TRANSLATIONS += \
     QtGuiCalculator_en_SG.ts
@@ -32,3 +35,6 @@ TRANSLATIONS += \
 qnx: target.path = /tmp/$${TARGET}/bin
 else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
+
+RESOURCES += \
+	resources.qrc
