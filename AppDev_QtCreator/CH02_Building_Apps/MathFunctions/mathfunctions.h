@@ -5,6 +5,7 @@ class MathFunctions
 {
 public:
     MathFunctions();
+    static unsigned long int factorial(unsigned int n);
 };
 
 #endif // MATHFUNCTIONS_H

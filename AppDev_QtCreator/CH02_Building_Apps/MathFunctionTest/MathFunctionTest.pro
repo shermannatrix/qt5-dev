@@ -1,6 +1,9 @@
 QT -= gui
 
-CONFIG += c++11 console
+# No debug no output
+CONFIG(release, debug|release): DEFINES += QT_NO_DEBUG_OUTPUT
+
+CONFIG += c++17 console
 CONFIG -= app_bundle
 
 # The following define makes your compiler emit warnings if you use
@@ -24,3 +27,16 @@ TRANSLATIONS += \
 qnx: target.path = /tmp/$${TARGET}/bin
 else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
+
+win32:CONFIG(release, debug|release): LIBS += -L$$PWD/../MathFunctions_Debug/release/ -lMathFunctions
+else:win32:CONFIG(debug, debug|release): LIBS += -L$$PWD/../MathFunctions_Debug/debug/ -lMathFunctions
+else:unix: LIBS += -L$$PWD/../MathFunctions_Debug/ -lMathFunctions
+
+INCLUDEPATH += $$PWD/../MathFunctions/
+DEPENDPATH += $$PWD/../MathFunctions/
+
+win32-g++:CONFIG(release, debug|release): PRE_TARGETDEPS += $$PWD/../MathFunctions_Debug/release/libMathFunctions.a
+else:win32-g++:CONFIG(debug, debug|release): PRE_TARGETDEPS += $$PWD/../MathFunctions_Debug/debug/libMathFunctions.a
+else:win32:!win32-g++:CONFIG(release, debug|release): PRE_TARGETDEPS += $$PWD/../MathFunctions_Debug/release/MathFunctions.lib
+else:win32:!win32-g++:CONFIG(debug, debug|release): PRE_TARGETDEPS += $$PWD/../MathFunctions_Debug/debug/MathFunctions.lib
+else:unix: PRE_TARGETDEPS += $$PWD/../MathFunctions_Debug/libMathFunctions.a
